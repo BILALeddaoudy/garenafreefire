@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مزرعة الألماس فري فاير - Garena FreeFire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div id="language-toggle" class="language-toggle">
+        <button id="lang-btn" class="language-btn">
+            <span id="lang-text">English</span>
+        </button>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page active">
+        <div class="login-container">
+            <div class="login-overlay"></div>
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="logo-container">
+                        <!-- FreeFire Logo with Diamonds -->
+                        <div class="freefire-logo">
+                            <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L13.5 8.5L20 7L14.5 12.5L22 14L15.5 17.5L18 24L12 19L6 24L8.5 17.5L2 14L9.5 12.5L4 7L10.5 8.5L12 2Z"/>
+                            </svg>
+                            <div class="diamond-sparkle diamond-1">💎</div>
+                            <div class="diamond-sparkle diamond-2">💎</div>
+                            <div class="diamond-sparkle diamond-3">💎</div>
+                        </div>
+                    </div>
+                    <h1 id="login-title">مزرعة الألماس فري فاير</h1>
+                    <p id="login-subtitle">اكسب الألماس مجاناً عبر مشاهدة الإعلانات</p>
+                    <div class="garena-brand">
+                        <span class="brand-text">Powered by</span>
+                        <span class="garena-logo">GARENA</span>
+                        <span class="freefire-text">FREE FIRE</span>
+                    </div>
+                </div>
+
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="game-id" id="game-id-label">
+                            <span class="diamond-icon">💎</span>
+                            رقم حساب فري فاير
+                        </label>
+                        <input type="text" id="game-id" placeholder="أدخل رقم حساب فري فاير الخاص بك" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username" id="username-label">
+                            <span class="user-icon">👤</span>
+                            اسم المستخدم
+                        </label>
+                        <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+                    </div>
+
+                    <button type="submit" class="login-btn" id="login-submit">
+                        <span class="diamond-icon">💎</span>
+                        تسجيل دخول
+                        <span class="diamond-icon">💎</span>
+                    </button>
+                </form>
+
+                <div class="login-footer">
+                    <button type="button" id="toggle-auth" class="toggle-auth">
+                        ليس لديك حساب؟ سجل الآن
+                    </button>
+                </div>
+
+                <div class="how-it-works">
+                    <h3 id="how-it-works-title">
+                        <span class="diamond-icon">💎</span>
+                        كيف يعمل:
+                    </h3>
+                    <ul id="how-it-works-list">
+                        <li>💎 شاهد الإعلانات لكسب الألماس</li>
+                        <li>🔗 إعلانات الروابط = 1 ألماسة لكل إعلان</li>
+                        <li>📺 الإعلانات المباشرة = 2 ألماسة لكل إعلان</li>
+                        <li>✅ الحد الأدنى 72 إعلان للسحب</li>
+                        <li>🎯 الحد الأقصى للسحب: 102 ألماسة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo-small">
+                        <svg class="logo-icon-small" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 id="header-title">FreeFire Diamond Farm</h1>
+                        <p id="welcome-text">Welcome back, <span id="username-display"></span></p>
+                    </div>
+                </div>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Account Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value diamonds" id="diamonds-count">0</div>
+                    <div class="stat-label" id="diamonds-label">Diamonds</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value total-ads" id="total-ads-count">0</div>
+                    <div class="stat-label" id="total-ads-label">Total Ads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value link-ads" id="link-ads-count">0</div>
+                    <div class="stat-label" id="link-ads-label">Link Ads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value direct-ads" id="direct-ads-count">0</div>
+                    <div class="stat-label" id="direct-ads-label">Direct Ads</div>
+                </div>
+            </div>
+
+            <!-- Progress Card -->
+            <div class="progress-card">
+                <h3 id="progress-title">Progress to Withdrawal</h3>
+                <div class="progress-info">
+                    <span id="progress-text">Ads completed: 0/72</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-badge" id="progress-badge">72 more ads needed</div>
+            </div>
+
+            <!-- Ad Watching Section -->
+            <div id="ad-watching" class="ad-watching" style="display: none;">
+                <div class="watching-content">
+                    <div class="spinner"></div>
+                    <h3 id="watching-title">Watching Link Ad...</h3>
+                    <p id="watching-subtitle">Please wait 3 seconds</p>
+                    <div class="reward-text" id="reward-text">+1 Diamond</div>
+                </div>
+            </div>
+
+            <!-- Ad Options -->
+            <div id="ad-options" class="ad-options">
+                <div class="ad-card link-ad">
+                    <div class="ad-icon link-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 10-5.656-5.656l-1.1 1.1" />
+                        </svg>
+                    </div>
+                    <h3 id="link-ads-title">Link Ads</h3>
+                    <p id="link-ads-desc">Click on external links</p>
+                    <div class="ad-reward">+1 Diamond</div>
+                    <button id="watch-link-ad" class="ad-btn link-btn">Watch Link Ad</button>
+                </div>
+
+                <div class="ad-card direct-ad">
+                    <div class="ad-icon direct-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 id="direct-ads-title">Direct Ads</h3>
+                    <p id="direct-ads-desc">Watch video advertisements</p>
+                    <div class="ad-reward">+2 Diamonds</div>
+                    <button id="watch-direct-ad" class="ad-btn direct-btn">Watch Direct Ad</button>
+                </div>
+            </div>
+
+            <!-- Withdrawal Section -->
+            <div class="withdrawal-section">
+                <div class="withdrawal-info">
+                    <h3 id="withdraw-title">Withdraw Diamonds</h3>
+                    <p id="withdraw-desc">Complete 72 more ads to unlock withdrawal</p>
+                </div>
+                <button id="withdraw-btn" class="withdraw-btn" disabled>Withdraw</button>
+            </div>
+
+            <!-- Account Info -->
+            <div class="account-info">
+                <h3 id="account-info-title">Account Information</h3>
+                <div class="account-details">
+                    <div><strong id="game-id-text">Game ID:</strong> <span id="display-game-id"></span></div>
+                    <div><strong id="username-text">Username:</strong> <span id="display-username"></span></div>
+                    <div><strong id="total-earnings-text">Total Earnings:</strong> <span id="display-earnings">0</span> diamonds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Withdraw Page -->
+    <div id="withdraw-page" class="page">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button id="back-to-home" class="back-btn">← Back to Home</button>
+                    <h1 id="withdraw-page-title">Withdraw Diamonds</h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Account Summary -->
+            <div class="withdraw-stats">
+                <div class="stat-card">
+                    <div class="stat-value diamonds" id="withdraw-diamonds">0</div>
+                    <div class="stat-label" id="available-diamonds-label">Available Diamonds</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value total-ads" id="withdraw-ads">0</div>
+                    <div class="stat-label" id="ads-completed-label">Ads Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value max-withdraw" id="max-withdraw-amount">0</div>
+                    <div class="stat-label" id="max-withdrawal-label">Max Withdrawal</div>
+                </div>
+            </div>
+
+            <!-- Withdrawal Form -->
+            <div id="withdrawal-form" class="withdrawal-form">
+                <div class="form-header">
+                    <h2 id="withdraw-diamonds-title">Withdraw Diamonds</h2>
+                    <p id="withdraw-diamonds-desc">Choose how many diamonds you want to withdraw to your FreeFire account</p>
+                </div>
+
+                <!-- Game ID Display -->
+                <div class="game-id-display">
+                    <div class="game-id-info">
+                        <div class="game-id-label" id="withdrawing-to-label">Withdrawing to FreeFire ID:</div>
+                        <div class="game-id-value" id="withdraw-game-id">123456789</div>
+                        <div class="account-name" id="withdraw-account">Account: Username</div>
+                    </div>
+                    <div class="available-info">
+                        <div class="available-label" id="available-label">Available:</div>
+                        <div class="available-value" id="available-diamonds">0 💎</div>
+                    </div>
+                </div>
+
+                <!-- Withdrawal Amount -->
+                <div class="amount-selector">
+                    <div class="amount-header">
+                        <label id="withdrawal-amount-label">Withdrawal Amount:</label>
+                        <div class="amount-display" id="selected-amount">0 💎</div>
+                    </div>
+                    <input type="range" id="amount-slider" class="slider" min="1" max="102" value="1">
+                    <div class="slider-labels">
+                        <span>1 💎</span>
+                        <span id="max-label">102 💎 (Max)</span>
+                    </div>
+                </div>
+
+                <!-- Quick Select -->
+                <div class="quick-select">
+                    <button class="quick-btn" data-amount="25">25 💎</button>
+                    <button class="quick-btn" data-amount="50">50 💎</button>
+                    <button class="quick-btn" data-amount="75">75 💎</button>
+                    <button class="quick-btn" id="max-btn">102 💎</button>
+                </div>
+
+                <!-- Withdrawal Info -->
+                <div class="withdrawal-info-box">
+                    <h4 id="withdrawal-info-title">Withdrawal Information:</h4>
+                    <ul id="withdrawal-info-list">
+                        <li>• Diamonds will be added to your FreeFire account within 24 hours</li>
+                        <li>• Maximum withdrawal per session: 102 diamonds</li>
+                        <li>• Make sure your Game ID is correct before confirming</li>
+                        <li>• Withdrawals cannot be cancelled once processed</li>
+                    </ul>
+                </div>
+
+                <!-- Confirm Button -->
+                <button id="confirm-withdraw" class="confirm-withdraw">
+                    Confirm Withdrawal of <span id="confirm-amount">1</span> Diamonds
+                </button>
+            </div>
+
+            <!-- Processing State -->
+            <div id="processing-withdrawal" class="processing-state" style="display: none;">
+                <div class="processing-content">
+                    <div class="processing-spinner"></div>
+                    <div class="processing-title" id="processing-title">Processing withdrawal...</div>
+                    <div class="processing-subtitle" id="processing-subtitle">Please wait while we send your diamonds</div>
+                </div>
+            </div>
+
+            <!-- Success State -->
+            <div id="withdrawal-success" class="success-state" style="display: none;">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h2 id="success-title">Withdrawal Successful!</h2>
+                    <p id="success-message">
+                        <span id="success-amount">0</span> diamonds have been sent to your FreeFire account (<span id="success-game-id"></span>)
+                    </p>
+                    <p class="redirect-text" id="redirect-text">Redirecting to home page...</p>
+                </div>
+            </div>
+
+            <!-- Not Available State -->
+            <div id="withdrawal-not-available" class="not-available-state" style="display: none;">
+                <div class="not-available-content">
+                    <div class="warning-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.664-.833-2.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                        </svg>
+                    </div>
+                    <h3 id="not-available-title">Withdrawal Not Available</h3>
+                    <p id="not-available-message">You need to complete at least 72 ads to unlock withdrawal.</p>
+                    <div class="ads-needed-badge" id="ads-needed-badge">72 more ads needed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
